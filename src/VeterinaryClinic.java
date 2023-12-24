@@ -1,3 +1,10 @@
+import animals.Animal;
+import animals.Flyable;
+import animals.Goable;
+import animals.swimmable;
+import stuff.Doctor;
+import stuff.Nurse;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -19,7 +26,6 @@ public class VeterinaryClinic {
         }
         return result;
     }
-
     public List<Flyable> getFlyable(){
         List<Flyable> result = new ArrayList<>(patients.size());
         for (Animal animal:patients) {
@@ -28,17 +34,23 @@ public class VeterinaryClinic {
         }
         return result;
     }
-
-    public List<Swimable> getSwimable(){
-        List<Swimable> result = new ArrayList<>(patients.size());
+    public List<swimmable> getSwimable(){
+        List<swimmable> result = new ArrayList<>(patients.size());
         for (Animal animal:patients) {
-            if(animal instanceof Swimable)
-                result.add((Swimable) animal);
+            if(animal instanceof swimmable)
+                result.add((swimmable) animal);
         }
         return result;
     }
-
     public List<Animal> getPatients() {
         return patients;
+    }
+    public void checkup(Doctor doctor, Animal patient, List<String> appointments){
+        doctor.doCheckup(patient);
+        doctor.giveAppointments(patient, appointments);
+        doctor.prescribeMedication(patient);
+    }
+    public void procedures(Nurse nurse, Animal patient, List<String> appointments){
+        nurse.makeAppointments(patient, appointments);
     }
 }

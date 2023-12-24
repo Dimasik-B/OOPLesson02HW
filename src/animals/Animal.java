@@ -1,3 +1,5 @@
+package animals;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -5,6 +7,7 @@ public abstract class Animal {
     protected String name;
     protected LocalDate birthDate;
     protected List<String> vaccination;
+    protected List<String> appointments;
     protected String illness;
     protected String ownerName;
     protected String type;
@@ -37,24 +40,32 @@ public abstract class Animal {
         return ownerName;
     }
 
+    public List<String> getAppointments() {
+        return appointments;
+    }
+
+    public void setAppointments(List<String> appointments) {
+        this.appointments = appointments;
+    }
+
     private void wakeUp(){
-        System.out.println("Animal is wakeup");
+        System.out.println("animals.Animal is wakeup");
     }
 
     private void wakeUp(int time){
-        System.out.println("Animal is wakeup in " + time);
+        System.out.println("animals.Animal is wakeup in " + time);
     }
 
     private void eat(){
-        System.out.println("Animal ate");
+        System.out.println("animals.Animal ate");
     }
 
     private void play(){
-        System.out.println("Animal played");
+        System.out.println("animals.Animal played");
     }
 
     private void sleep(){
-        System.out.println("Animal sleeping");
+        System.out.println("animals.Animal sleeping");
     }
 
 //    public abstract void lifeCircle();
@@ -63,7 +74,7 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "animals.Animal{" +
                 "name='" + name + '\'' +
                 ", birthDate=" + birthDate +
                 ", vaccination=" + vaccination +

@@ -1,7 +1,9 @@
+package animals;
+
 import java.time.LocalDate;
 import java.util.List;
 
-public class Penguin extends Animal implements Goable, Swimable {
+public class Penguin extends Animal implements Goable, swimmable {
     public Penguin(String name, LocalDate birthDate, List<String> vaccination, String illness, String ownerName) {
         super(name, birthDate, vaccination, illness, ownerName);
     }
