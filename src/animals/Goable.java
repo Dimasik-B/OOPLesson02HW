@@ -1,3 +1,5 @@
+package animals;
+
 import java.io.Serializable;
 @FunctionalInterface
 public interface Goable {

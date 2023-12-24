@@ -12,6 +12,10 @@ public class Component implements Comparable<Component>{
         this.power = power;
     }
 
+    public int getPower() {
+        return power;
+    }
+
     @Override
     public String toString() {
         return "Component{" +

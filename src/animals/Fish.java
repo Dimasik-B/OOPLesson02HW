@@ -1,7 +1,9 @@
+package animals;
+
 import java.time.LocalDate;
 import java.util.List;
 
-public class Fish extends Animal implements Swimable {
+public class Fish extends Animal implements swimmable {
     public Fish(String name, LocalDate birthDate, List<String> vaccination, String illness, String ownerName) {
         super(name, birthDate, vaccination, illness, ownerName);
     }
